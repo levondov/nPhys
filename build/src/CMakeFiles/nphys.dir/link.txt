@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnphys.a CMakeFiles/nphys.dir/Engine.cc.o CMakeFiles/nphys.dir/Window.cc.o
+/usr/bin/ranlib libnphys.a
