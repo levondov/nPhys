@@ -49,11 +49,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/levon/projects/nPhys/build/dep/glfw/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/levon/projects/nPhys/build/src/cmake_install.cmake")
 endif()
 

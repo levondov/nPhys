@@ -7,12 +7,15 @@ project(nPhys VERSION 1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(GLFW_BUILD_WAYLAND OFF CACHE BOOL "" FORCE)
+set(CMAKE_AUTOMOC ON)  # Enable Qt's Meta-Object Compiler
+set(CMAKE_AUTORCC ON)  # Optional: Enable Qt's resource compiler
+set(CMAKE_AUTOUIC ON)  # Optional: Enable Qt's UI compiler
 
 # Enable folders in IDEs
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
+
 # Set output directories
 add_subdirectory(dep/pybind11)
-add_subdirectory(dep/glfw)
 add_subdirectory(src)

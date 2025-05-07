@@ -1,6 +1,6 @@
 #include <pybind11/pybind11.h>
 #include "../Engine.hpp"
-#include "../models/model_types.hpp"
+#include "../object_types.hpp"
 
 namespace py = pybind11;
 
@@ -14,4 +14,6 @@ PYBIND11_MODULE(nphys, m) {
 
         // Bind the model types
         bind_model_types(m); // Call the function to bind structs
+        // Bind the shape types
+        bind_shape_types(m); // Call the function to bind structs
 }

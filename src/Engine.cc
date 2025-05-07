@@ -1,22 +1,30 @@
 #include "Engine.hpp"
 #include <iostream>
 
-Engine::Engine() : window(nullptr) {}
+#include "Window.hpp"
+#include <QApplication>
+
+Engine::Engine() : shapeCount(0), settings(nullptr), app(nullptr), window(nullptr) 
+{
+    for (size_t i = 0; i < constants::MAX_SHAPES; ++i) 
+    {
+        shapes[i] = nullptr; // Initialize all elements to nullptr
+    }
+}
 
 Engine::~Engine() 
 {
     shutdown();
 }
 
-bool Engine::initialize() 
+bool Engine::initialize(simulation_settings* _settings) 
 {
-    window = new Window(800, 600, "nPhys Engine");
-    if (!window->initialize()) 
-    {
-        delete window;
-        window = nullptr;
-        return false;
-    }
+    settings = _settings;
+    // int argc = 0;
+    // app = new QApplication(argc, nullptr);
+
+    // window = new Window(600, 400, "nPhys Qt View");
+    // window->show();
 
     std::cout << "Engine initialized\n";
     return true;
@@ -24,58 +32,52 @@ bool Engine::initialize()
 
 bool Engine::reset() 
 {
-    if (window) 
-    {
-        delete window;
-        window = nullptr;
-    }
-
     shapeCount = 0; // Reset the shape count
     std::cout << "Engine reset\n";
     return true;
 }
 
 bool Engine::run() 
-{
-    if (!window) return false;
+{  
+    EOMs::calcDynamics(shapes, settings);
+    EOMs::calcEOMs(shapes);
 
-    while (!window->shouldClose()) 
-    {
-        for(shape* s : shapes) 
-        {
-            if (s) 
-            {
-                window->drawCircle(s->st.x.x, s->st.y.x, s->dyn.size1, 10);
-            }
-        }
+    settings->t += settings->dt;
+    settings->n_steps++;
 
-        window->swapBuffers();
-        window->pollEvents();
-    }
-
+    // if (app && window) 
+    // {
+    //     return app->exec() == 0;
+    // }
     return true;
 }
 
 bool Engine::shutdown() 
 {
-    if (window) 
-    {
-        delete window;
-        window = nullptr;
-    }
-
+    // if (window) 
+    // {
+    //     delete window;
+    //     window = nullptr;
+    // }
+    // if (app) 
+    // {
+    //     delete app;
+    //     app = nullptr;
+    // }
     std::cout << "Engine shutdown\n";
     return true;
 }
 
 bool Engine::addShape(shape* newShape) 
 {
-    if (shapeCount < MAX_SHAPES && newShape) 
+    if (shapeCount < constants::MAX_SHAPES && newShape) 
     {
-        newShape->dyn.mass = 1.0; // Initialize mass to 1.0
+        newShape->st.x.dt = settings->dt; // Set the time step for the new shape
+        newShape->st.y.dt = settings->dt;
+        newShape->st.theta.dt = settings->dt;
         shapes[shapeCount++] = newShape; // Add the shape and increment the count
-        std::cout << "Shape added. Total shapes: " << shapeCount << "\n";
-        std::cout << "Shape name: " << newShape->name << "\n";
+
+        std::cout << "Shape (" << newShape->name << ") added. Total shapes: " << shapeCount << "\n";
         return true;
     }
     return false; // Return false if the array is full or newShape is null

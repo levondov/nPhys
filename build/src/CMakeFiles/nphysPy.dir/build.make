@@ -69,10 +69,24 @@ include src/CMakeFiles/nphysPy.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/nphysPy.dir/flags.make
 
+src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o: src/CMakeFiles/nphysPy.dir/flags.make
+src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o: src/nphysPy_autogen/mocs_compilation.cpp
+src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o: src/CMakeFiles/nphysPy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o -MF CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o -c /home/levon/projects/nPhys/build/src/nphysPy_autogen/mocs_compilation.cpp
+
+src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.i"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levon/projects/nPhys/build/src/nphysPy_autogen/mocs_compilation.cpp > CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.i
+
+src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.s"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levon/projects/nPhys/build/src/nphysPy_autogen/mocs_compilation.cpp -o CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.s
+
 src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o: src/CMakeFiles/nphysPy.dir/flags.make
 src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o: ../src/bindings/Bindings.cc
 src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o: src/CMakeFiles/nphysPy.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o"
 	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o -MF CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o.d -o CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o -c /home/levon/projects/nPhys/src/bindings/Bindings.cc
 
 src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.i: cmake_force
@@ -85,20 +99,21 @@ src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.s: cmake_force
 
 # Object files for target nphysPy
 nphysPy_OBJECTS = \
+"CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o"
 
 # External object files for target nphysPy
 nphysPy_EXTERNAL_OBJECTS =
 
+src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o
 src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o
 src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/CMakeFiles/nphysPy.dir/build.make
 src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/libnphys.a
-src/nphysPy.cpython-310-x86_64-linux-gnu.so: dep/glfw/src/libglfw3.a
-src/nphysPy.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/librt.a
-src/nphysPy.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libm.so
-src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/libglad.a
+src/nphysPy.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
+src/nphysPy.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
+src/nphysPy.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 src/nphysPy.cpython-310-x86_64-linux-gnu.so: src/CMakeFiles/nphysPy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module nphysPy.cpython-310-x86_64-linux-gnu.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared module nphysPy.cpython-310-x86_64-linux-gnu.so"
 	cd /home/levon/projects/nPhys/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nphysPy.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/levon/projects/nPhys/build/src && /usr/bin/strip /home/levon/projects/nPhys/build/src/nphysPy.cpython-310-x86_64-linux-gnu.so
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Creating symlink: nphys.so -> \$$<TARGET_FILE:nphysPy>"

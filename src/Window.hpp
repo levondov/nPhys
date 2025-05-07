@@ -1,31 +1,21 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
-#define GLFW_INCLUDE_NONE
-#include <GLFW/glfw3.h>
+#include <QMainWindow>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 
-class Window 
+class Window : public QMainWindow 
 {
-public:
-    Window(int width, int height, const char* title);
-    ~Window();
+    Q_OBJECT
 
-    bool initialize();
-    void swapBuffers();
-    bool shouldClose() const;
-    void pollEvents();
+    public:
+        Window(int width, int height, const QString& title);
+        ~Window();
 
-    void drawCircle(float x, float y, float radius, int segments = 36);
-    void setupCircle(float radius, int segments = 36);
-
-private:
-    GLFWwindow* window;
-    int width, height;
-    const char* title;
-
-    unsigned int circleVAO = 0;
-    unsigned int circleVBO = 0;
-    int circleSegments = 0;
+    private:
+        QGraphicsScene* scene;
+        QGraphicsView* view;
 };
 
 #endif // WINDOW_HPP

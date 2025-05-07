@@ -1,2 +1,2 @@
-/usr/bin/ar qc libnphys.a CMakeFiles/nphys.dir/Engine.cc.o CMakeFiles/nphys.dir/Window.cc.o
+/usr/bin/ar qc libnphys.a CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o CMakeFiles/nphys.dir/Engine.cc.o CMakeFiles/nphys.dir/Window.cc.o CMakeFiles/nphys.dir/EOMs.cc.o CMakeFiles/nphys.dir/Frames.cc.o
 /usr/bin/ranlib libnphys.a

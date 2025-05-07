@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -flto -shared  -o nphysPy.cpython-310-x86_64-linux-gnu.so CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o  libnphys.a ../dep/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl libglad.a 
+/usr/bin/c++ -fPIC -flto -shared  -o nphysPy.cpython-310-x86_64-linux-gnu.so CMakeFiles/nphysPy.dir/nphysPy_autogen/mocs_compilation.cpp.o CMakeFiles/nphysPy.dir/bindings/Bindings.cc.o  libnphys.a /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 

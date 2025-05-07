@@ -69,10 +69,24 @@ include src/CMakeFiles/nphys.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/nphys.dir/flags.make
 
+src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o: src/CMakeFiles/nphys.dir/flags.make
+src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o: src/nphys_autogen/mocs_compilation.cpp
+src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o: src/CMakeFiles/nphys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o -MF CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o -c /home/levon/projects/nPhys/build/src/nphys_autogen/mocs_compilation.cpp
+
+src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.i"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levon/projects/nPhys/build/src/nphys_autogen/mocs_compilation.cpp > CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.i
+
+src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.s"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levon/projects/nPhys/build/src/nphys_autogen/mocs_compilation.cpp -o CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.s
+
 src/CMakeFiles/nphys.dir/Engine.cc.o: src/CMakeFiles/nphys.dir/flags.make
 src/CMakeFiles/nphys.dir/Engine.cc.o: ../src/Engine.cc
 src/CMakeFiles/nphys.dir/Engine.cc.o: src/CMakeFiles/nphys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/nphys.dir/Engine.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/nphys.dir/Engine.cc.o"
 	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphys.dir/Engine.cc.o -MF CMakeFiles/nphys.dir/Engine.cc.o.d -o CMakeFiles/nphys.dir/Engine.cc.o -c /home/levon/projects/nPhys/src/Engine.cc
 
 src/CMakeFiles/nphys.dir/Engine.cc.i: cmake_force
@@ -86,7 +100,7 @@ src/CMakeFiles/nphys.dir/Engine.cc.s: cmake_force
 src/CMakeFiles/nphys.dir/Window.cc.o: src/CMakeFiles/nphys.dir/flags.make
 src/CMakeFiles/nphys.dir/Window.cc.o: ../src/Window.cc
 src/CMakeFiles/nphys.dir/Window.cc.o: src/CMakeFiles/nphys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/nphys.dir/Window.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/nphys.dir/Window.cc.o"
 	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphys.dir/Window.cc.o -MF CMakeFiles/nphys.dir/Window.cc.o.d -o CMakeFiles/nphys.dir/Window.cc.o -c /home/levon/projects/nPhys/src/Window.cc
 
 src/CMakeFiles/nphys.dir/Window.cc.i: cmake_force
@@ -97,19 +111,53 @@ src/CMakeFiles/nphys.dir/Window.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nphys.dir/Window.cc.s"
 	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levon/projects/nPhys/src/Window.cc -o CMakeFiles/nphys.dir/Window.cc.s
 
+src/CMakeFiles/nphys.dir/EOMs.cc.o: src/CMakeFiles/nphys.dir/flags.make
+src/CMakeFiles/nphys.dir/EOMs.cc.o: ../src/EOMs.cc
+src/CMakeFiles/nphys.dir/EOMs.cc.o: src/CMakeFiles/nphys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/nphys.dir/EOMs.cc.o"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphys.dir/EOMs.cc.o -MF CMakeFiles/nphys.dir/EOMs.cc.o.d -o CMakeFiles/nphys.dir/EOMs.cc.o -c /home/levon/projects/nPhys/src/EOMs.cc
+
+src/CMakeFiles/nphys.dir/EOMs.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nphys.dir/EOMs.cc.i"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levon/projects/nPhys/src/EOMs.cc > CMakeFiles/nphys.dir/EOMs.cc.i
+
+src/CMakeFiles/nphys.dir/EOMs.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nphys.dir/EOMs.cc.s"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levon/projects/nPhys/src/EOMs.cc -o CMakeFiles/nphys.dir/EOMs.cc.s
+
+src/CMakeFiles/nphys.dir/Frames.cc.o: src/CMakeFiles/nphys.dir/flags.make
+src/CMakeFiles/nphys.dir/Frames.cc.o: ../src/Frames.cc
+src/CMakeFiles/nphys.dir/Frames.cc.o: src/CMakeFiles/nphys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/nphys.dir/Frames.cc.o"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/nphys.dir/Frames.cc.o -MF CMakeFiles/nphys.dir/Frames.cc.o.d -o CMakeFiles/nphys.dir/Frames.cc.o -c /home/levon/projects/nPhys/src/Frames.cc
+
+src/CMakeFiles/nphys.dir/Frames.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nphys.dir/Frames.cc.i"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levon/projects/nPhys/src/Frames.cc > CMakeFiles/nphys.dir/Frames.cc.i
+
+src/CMakeFiles/nphys.dir/Frames.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nphys.dir/Frames.cc.s"
+	cd /home/levon/projects/nPhys/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levon/projects/nPhys/src/Frames.cc -o CMakeFiles/nphys.dir/Frames.cc.s
+
 # Object files for target nphys
 nphys_OBJECTS = \
+"CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/nphys.dir/Engine.cc.o" \
-"CMakeFiles/nphys.dir/Window.cc.o"
+"CMakeFiles/nphys.dir/Window.cc.o" \
+"CMakeFiles/nphys.dir/EOMs.cc.o" \
+"CMakeFiles/nphys.dir/Frames.cc.o"
 
 # External object files for target nphys
 nphys_EXTERNAL_OBJECTS =
 
+src/libnphys.a: src/CMakeFiles/nphys.dir/nphys_autogen/mocs_compilation.cpp.o
 src/libnphys.a: src/CMakeFiles/nphys.dir/Engine.cc.o
 src/libnphys.a: src/CMakeFiles/nphys.dir/Window.cc.o
+src/libnphys.a: src/CMakeFiles/nphys.dir/EOMs.cc.o
+src/libnphys.a: src/CMakeFiles/nphys.dir/Frames.cc.o
 src/libnphys.a: src/CMakeFiles/nphys.dir/build.make
 src/libnphys.a: src/CMakeFiles/nphys.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libnphys.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/levon/projects/nPhys/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libnphys.a"
 	cd /home/levon/projects/nPhys/build/src && $(CMAKE_COMMAND) -P CMakeFiles/nphys.dir/cmake_clean_target.cmake
 	cd /home/levon/projects/nPhys/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nphys.dir/link.txt --verbose=$(VERBOSE)
 

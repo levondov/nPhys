@@ -1,18 +1,20 @@
 #ifndef ENGINE_HPP
 #define ENGINE_HPP
 
-#include "Window.hpp"
-#include "models/model_types.hpp"
+#include "object_types.hpp"
+#include "Constants.hpp"
+#include "EOMs.hpp"
 
-constexpr size_t MAX_SHAPES = 100; // Define a maximum number of shapes
+class QApplication;
+class Window;
 
 class Engine 
 {
     public:
         Engine();
         ~Engine();
-    
-        bool initialize();
+        
+        bool initialize(simulation_settings* _sim);
         bool run();
         bool shutdown();
         bool reset();
@@ -20,11 +22,13 @@ class Engine
         bool addShape(shape* newShape);
 
     private:
-        Window* window;
-        
-        shape* shapes[MAX_SHAPES]; // Fixed-size array
-        size_t shapeCount;         // Keep track of the number of shapes
+        shape* shapes[constants::MAX_SHAPES];
+        size_t shapeCount;
 
+        simulation_settings* settings = nullptr;
+
+        QApplication* app = nullptr;
+        Window* window = nullptr;
 };
 
-#endif // MYCLASS_HPP
+#endif // ENGINE_HPP

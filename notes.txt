@@ -1,3 +1,5 @@
 had to install x11 libraries sudo apt install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
-
 sudo apt install libgl-dev
+
+qt
+sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
