@@ -8,6 +8,7 @@ PYBIND11_MODULE(nphys, m) {
     py::class_<Engine>(m, "Engine")
         .def(py::init<>())
         .def("initialize", &Engine::initialize)
+        .def("reset", &Engine::reset)
         .def("run", &Engine::run)
         .def("addShape", &Engine::addShape)
         .def("shutdown", &Engine::shutdown);

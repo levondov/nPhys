@@ -4,6 +4,7 @@ set ( SOURCES
     Window.cc
     EOMs.cc
     Frames.cc
+    Collisions.cc
 )
 
 # Create an object library or static library for reuse
