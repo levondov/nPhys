@@ -4,12 +4,13 @@
 #include "Window.hpp"
 #include <QApplication>
 
-Engine::Engine() : shapeCount(0), settings(nullptr), app(nullptr), window(nullptr) 
+#include "Integration.hpp"
+#include "Dynamics.hpp"
+#include "Collisions.hpp"
+#include "EOMs.hpp"
+
+Engine::Engine() : app(nullptr), window(nullptr)
 {
-    for (size_t i = 0; i < constants::MAX_SHAPES; ++i) 
-    {
-        shapes[i] = nullptr; // Initialize all elements to nullptr
-    }
 }
 
 Engine::~Engine() 
@@ -17,7 +18,7 @@ Engine::~Engine()
     shutdown();
 }
 
-bool Engine::initialize(simulation_settings* _settings) 
+bool Engine::initialize(simulation_settings _settings) 
 {
     settings = _settings;
     // int argc = 0;
@@ -32,18 +33,19 @@ bool Engine::initialize(simulation_settings* _settings)
 
 bool Engine::reset() 
 {
-    shapeCount = 0; // Reset the shape count
     std::cout << "Engine reset\n";
     return true;
 }
 
 bool Engine::run() 
-{  
-    EOMs::calcDynamics(shapes, settings);
-    EOMs::calcEOMs(shapes);
+{
+    Dynamics::calculate(shapes, settings);
+    Collisions::walls(shapes, settings);
+    EOMs::calculate(shapes);
+    Integration::step(shapes, settings.dt);
 
-    settings->t += settings->dt;
-    settings->n_steps++;
+    settings.t += settings.dt;
+    settings.n_steps++;
 
     // if (app && window) 
     // {
@@ -68,17 +70,18 @@ bool Engine::shutdown()
     return true;
 }
 
-bool Engine::addShape(shape* newShape) 
+bool Engine::add_shape(double x, double y, double mass, shape_type type, double radius, double e)
 {
-    if (shapeCount < constants::MAX_SHAPES && newShape) 
-    {
-        newShape->st.x.dt = settings->dt; // Set the time step for the new shape
-        newShape->st.y.dt = settings->dt;
-        newShape->st.theta.dt = settings->dt;
-        shapes[shapeCount++] = newShape; // Add the shape and increment the count
+    return shapes.add(x, y, mass, type, radius, e);
+}
 
-        std::cout << "Shape (" << newShape->name << ") added. Total shapes: " << shapeCount << "\n";
-        return true;
+std::vector<std::pair<double, double>> Engine::get_positions() const
+{
+    std::vector<std::pair<double, double>> positions;
+    positions.reserve(shapes.count);
+    for (size_t i = 0; i < shapes.count; i++)
+    {
+        positions.push_back({shapes.x[i], shapes.y[i]});
     }
-    return false; // Return false if the array is full or newShape is null
+    return positions;
 }

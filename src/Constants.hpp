@@ -1,9 +1,11 @@
 #ifndef CONSTANTS_HPP
 #define CONSTANTS_HPP
 
+#include <cstddef>
+
 namespace constants
 {
-    constexpr size_t MAX_SHAPES = 100;
+    constexpr size_t MAX_OBJECTS = 100;
 
     constexpr double PI = 3.14159265358979323846;
     constexpr double RAD_TO_DEG = 180.0 / PI;
